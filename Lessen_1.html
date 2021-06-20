@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый урок</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+        //Задание 1
+        let tempCel = +prompt("Введите температуру в градусах Цельсия");
+        let tempFar = (9 / 5) * tempCel + 32;
+        alert(`${tempCel} градусов по Цельсию = ${tempFar} градусов  по Фаренгейту`);
+
+        //Задание 2
+        let name = "Василий";
+        let admin = name;
+        console.log(admin);
+
+        //Задание 3
+        // 10+10=20 неявное приведение и конкатенация(выведется строка "2010")
+        let firstResult = 10 + 10 + "10";
+        console.log(firstResult);
+
+        // первый +(неявное приведение к строке и конкатенация("1010")), второй + тоже самое, (выведется строка "101010")
+        let secondResult = 10 + "10" + 10;
+        console.log(secondResult);
+
+        // 10+10=20 + (+"10" унарный плюс, получаем из строки число 10), (выведется число 30)
+        let thirdResult = 10 + 10 + +"10";
+        console.log(thirdResult);
+
+        // 10 / (-"" унарный минус дает -0) = -Infinity
+        let fourthResult = 10 / -"";
+        console.log(fourthResult);
+
+        // унарный плюс не сможет привести к number из-за запятой и даст NaN(деление на NaN тоже дает NaN)
+        let fifthResult = 10 / +"2,5";
+        console.log(fifthResult);
+    </script>
+</body>
+
+</html>
